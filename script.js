@@ -182,7 +182,7 @@ for (let elem of collection) {
     let divlien = document.createElement('div');
     divlien.className = 'card__lien';
   
-    let button = document.createElement('button');
+    let button = document.createElement('a');
     button.href = elem.trailer;
     button.textContent = 'Voir la bande-annonce';
   

@@ -37,6 +37,7 @@ h1{
     border-radius: 20px;
     background-color: white;
     margin: 20px;
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
     &__genre{
         margin-top: 0px;
         padding-left: 10px;
@@ -85,12 +86,21 @@ h1{
     font-weight: 500;
     }
 }
+.card__lien a:hover {
+    text-transform: uppercase;
+    transform: scale(1.05);
+    transition-duration: 200ms;
+}
+.card:hover{
+    transform: scale(1.05);
+    transition-duration: 200ms;
+}
 .content{
     background-color: white;
     border-bottom-left-radius:10px;
     border-bottom-right-radius:10px;
 }
-button{
+a{
     background-color: $dark-cyan;
     color:white;
     border-radius: 10px;
@@ -98,5 +108,9 @@ button{
 text-align: center;
 margin: auto;
 height: 40px;
+text-decoration: none;
+padding-top: 8px;
 }
+
 }
+
