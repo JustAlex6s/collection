@@ -161,11 +161,7 @@ const collection = [
 
   //BODY
   
-  let filtre = document.createElement('button');
-  filtre.className ='card__croix';
-  filtre.textContent = 'X';
-
-
+ 
   let section = document.getElementById('card-container'); 
 
 for (let elem of collection) {
@@ -243,7 +239,7 @@ function supprimerCarte() {
     // Obtenez le parent (la carte) du bouton
     let carte = this.parentNode;
   
-    // Supprimez la carte du parent
+    // Supprimez la carte 
     carte.parentNode.removeChild(carte);
   }
   

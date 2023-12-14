@@ -4,11 +4,7 @@ $dark-cyan:hsl(195, 59%, 44%);
 $cream:hsl(30, 38%, 92%);
 body{
     background-color: $cream;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+   
 }
 #card-container{
     display: flex;
@@ -99,6 +95,7 @@ body{
         right:1px;
         border-radius: 20px;
         background-color: white;
+        font-family: "Fraunces";
 
 
     }
