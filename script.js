@@ -133,12 +133,51 @@ const collection = [
 
   ];
 
+//HEADER
+  let myheader = document.getElementById('myheader'); 
+  myheader.className = 'header';
+  
+  let mySecondheader = document.getElementById('mySecondheader'); 
+  mySecondheader.className = 'headerSecond';
+  
+
+  let h1 = document.createElement('h1'); 
+  h1.className = 'h1-lien';
+  h1.textContent = 'Vous voulez vous faire une petite fraiyeur ?';
+
+  let imgmoi = document.createElement('img');
+  imgmoi.src = "/Users/alexisdelfosse/collection/images/profillinkedin.jpeg";
+  imgmoi.className = 'image-moi';
+
+  let mypara = document.createElement('p'); 
+  mypara.className = 'my-para';
+  mypara.textContent = 'Vous trouverez ci-desssous ma collection de film horrifique ! Avec les films vous ferez les meilleurs cauchemars... Consultez mes projets Github et contactez moi si vous avez une question.';
+
+  let boxheader = document.getElementById('boxheader'); 
+  boxheader.appendChild(myheader);
+  myheader.appendChild(imgmoi);
+  mySecondheader.appendChild(h1);
+  mySecondheader.appendChild(mypara);
+
+  //BODY
+  
+  let filtre = document.createElement('button');
+  filtre.className ='card__croix';
+  filtre.textContent = 'X';
+
 
   let section = document.getElementById('card-container'); 
 
 for (let elem of collection) {
     let div = document.createElement('div');
     div.className = 'card';
+
+    let croix = document.createElement('button');
+    croix.className ='card__croix';
+    croix.textContent = 'X';
+
+    div.appendChild(croix);
+
   
     let divimg = document.createElement('div');
     divimg.className = 'card__image';
@@ -197,4 +236,18 @@ for (let elem of collection) {
     div.appendChild(divlien);
   
     section.appendChild(div);
+   
 }
+
+function supprimerCarte() {
+    // Obtenez le parent (la carte) du bouton
+    let carte = this.parentNode;
+  
+    // Supprimez la carte du parent
+    carte.parentNode.removeChild(carte);
+  }
+  
+  // Ajouter un gestionnaire d'événements à tous les boutons avec la classe "card__croix"
+  document.querySelectorAll('.card__croix').forEach(function(button) {
+    button.addEventListener('click', supprimerCarte);
+  });

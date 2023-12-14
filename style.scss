@@ -17,13 +17,66 @@ body{
     align-content: flex-start;
     justify-content: center;
 }
-h1{
-    text-align: center;
-    font-size: 40px;
-        font-family: "Fraunces";
+#boxheader{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
 
 }
-@media (min-width: 400px) {
+#myheader{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.h1-lien{
+    text-align: center;
+    font-size: 40px;
+    font-family: "Fraunces";
+}
+.image-moi{
+    width:70px;
+    height:70px;
+    border-radius: 70px;
+    max-width: none;
+
+}
+#mySecondheader{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+}
+@media (max-width: 470px) {
+    #boxheader{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        margin: 10px;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
+    
+    }
+}
+
+@media (min-width: 470px) {
 .desktop-image {
     display: block;
     display: block;
@@ -38,6 +91,17 @@ h1{
     background-color: white;
     margin: 20px;
     box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    &__croix{
+        position: absolute;
+        color:red;
+        font-size: 20px;
+        right:1px;
+        border-radius: 20px;
+        background-color: white;
+
+
+    }
     &__genre{
         margin-top: 0px;
         padding-left: 10px;
